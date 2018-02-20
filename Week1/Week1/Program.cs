@@ -21,7 +21,7 @@ namespace Week1
             var anotherBoolean = false;
 
             Console.WriteLine($"Normal initialization : {someInt}, {someString}, {someBoolean}");
-            Console.WriteLine($"Var initialization : {anotherInt}, {anotherString}, {anotherBoolean}" );
+            Console.WriteLine($"Var initialization : {anotherInt}, {anotherString}, {anotherBoolean}");
 
             #endregion
 
@@ -96,6 +96,29 @@ namespace Week1
             {
                 Console.WriteLine(e);
             }
+
+            #endregion
+
+            #region CollectionType
+
+            var itemList = new List<string>(){"Item1", "Item2", "Item3"};
+            var itemDictionary = new Dictionary<string, string>(){{"KeyOne", "ItemOne"}, {"KeyTwo", "ItemTwo"}, {"KeyThree", "ItemThree"}};
+            var itemTuple = new Tuple<string, bool, int>("Hello", false, 33);
+
+            foreach (var item in itemList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            foreach (var item in itemDictionary)
+            {
+                Console.WriteLine($"{item.Key} : {item.Value}");
+            }
+            Console.WriteLine(itemDictionary["KeyTwo"]);
+            Console.WriteLine();
+
+            Console.WriteLine($"Items in tuple : {itemTuple.Item1}, {itemTuple.Item2}, {itemTuple.Item3}");
 
             #endregion
 
