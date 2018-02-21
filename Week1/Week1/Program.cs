@@ -8,6 +8,30 @@ namespace Week1
 {
     class Program
     {
+
+        class Human
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+
+            public Human()
+            {
+                Name = "Some Human";
+                Age = 21;
+            }
+
+            public Human(string name, int age)
+            {
+                Name = name;
+                Age = age;
+            }
+
+            public void SayHello()
+            {
+                Console.WriteLine($"Hi, my name is {Name}");
+            }
+        }
+
         static void Main(string[] args)
         {
             #region BasicObject
@@ -122,7 +146,31 @@ namespace Week1
 
             #endregion
 
+            #region Functions
+
+            Console.WriteLine(SomeFunction("Some Input"));
+
+            #endregion
+
+            #region Classes
+
+            var someHuman = new Human();
+            Console.WriteLine($"Human {someHuman.Name} is created. He/She is {someHuman.Age} years old");
+            someHuman.SayHello();
+
+            var anotherHuman = new Human("Eagle", 20);
+            Console.WriteLine($"This is {anotherHuman.Name} and he is {anotherHuman.Age} years old");
+            anotherHuman.Age = 18;
+            Console.WriteLine($"{anotherHuman.Name}'s age is changed to {anotherHuman.Age}");
+
+            #endregion
+
             Console.ReadKey();
+        }
+
+        private static string SomeFunction(string someParameter)
+        {
+            return $"The string that was passed in is: {someParameter}";
         }
     }
 }
