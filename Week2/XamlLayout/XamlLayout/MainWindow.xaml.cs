@@ -24,5 +24,20 @@ namespace XamlLayout
         {
             InitializeComponent();
         }
+
+        private void GridPageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            AppFrame.Navigate(new GridDemoPage());
+        }
+
+        private void StackPanelButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            AppFrame.Navigate(new StackPanelDemoPage());
+        }
+
+        private void ScrollViewerButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            AppFrame.Navigate(new ScrollViewDemoPage());
+        }
     }
 }

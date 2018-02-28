@@ -6,5 +6,27 @@
         xmlns:local="clr-namespace:XamlLayout"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <local:ScrollViewDemoPage/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="0">
+            <Button Name="GridPageButton"
+                    Content="Grid Demo"
+                    Margin="10"
+                    Click="GridPageButton_OnClick"/>
+            <Button Name="StackPanelButton"
+                    Content="StackPanel Demo"
+                    Margin="10"
+                    Click="StackPanelButton_OnClick"/>
+            <Button Name="ScrollViewerButton"
+                    Content="ScrollViewer Demo"
+                    Margin="10"
+                    Click="ScrollViewerButton_OnClick"/>
+        </StackPanel>
+        <Frame Name="AppFrame"
+               Grid.Row="1"/>
+    </Grid>
 </Window>
