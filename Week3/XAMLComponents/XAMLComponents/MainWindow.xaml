@@ -1,0 +1,48 @@
+﻿<Window x:Class="XAMLComponents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAMLComponents"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0">
+            <StackPanel>
+                <TextBlock Text="This is a TextBlock, it shows text"
+                           Margin="20"
+                           Width="300"/>
+                <TextBox Text="This is a TextBox, users can enter text here"
+                         Margin="20"
+                         Width="300"/>
+                <Button Content="Click Me!"
+                        Margin="20"
+                        Width="200"/>
+                <Image Source="Images/example-picture.jpg"
+                       Margin="20"
+                       Width="500"
+                       Stretch="UniformToFill"/>
+                <CheckBox Content="This is a CheckBox"
+                          Margin="20"/>
+                <ComboBox Margin="20"
+                          Width="500">
+                    <ComboBox.Items>
+                        <ComboBoxItem>This is item 1</ComboBoxItem>
+                        <ComboBoxItem>This is item 2</ComboBoxItem>
+                        <ComboBoxItem>This is item 3</ComboBoxItem>
+                    </ComboBox.Items>
+                </ComboBox>
+                <Label Margin="20, 20, 20, 0">This is a Slider</Label>
+                <Slider Margin="20, 0, 20, 20"
+                        Width="500"/>
+            </StackPanel>
+        </ScrollViewer>
+        <WebBrowser Name="DemoBrowser"
+                    Margin="20"
+                    Grid.Column="1"/>
+    </Grid>
+</Window>
